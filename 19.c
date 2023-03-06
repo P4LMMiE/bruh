@@ -1,25 +1,34 @@
 #include <stdio.h>
 int main()
 {
-    int n,i,x[100],y[100],max=0,sum[100];
+    int n,i,x[100],y[100],sum[100];
+    int thismax = 0;
+    int thisnum = 0;
+
+
     printf("N = ");
     scanf("%d",&n);
     if(n>=5)
     {   printf("Input X : ");
         for(i=0;i<n;i++)
         {
-            scanf("%d",&x[i]);
+            scanf("%d", &x[i]);
         }
         printf("Input Y : ");
         for(i=0;i<n;i++)
         {
-            scanf("%d",&y[i]);
+            scanf("%d", &y[i]);
         }
         for(i=0;i<n;i++)
         {
-            sum[i]=x[i]+y[i];
+            sum[i] = x[i] + y[i];
+            if(thismax < sum[i])
+            {
+                thismax = sum[i];
+                thisnum = i;
+            }
         }
     }
-    printf("Output X : %d",x[]);
-    printf("Output Y : %d",y[]);
+    printf("\nOutput X : %d\n", x[thisnum]);
+    printf("Output Y : %d", y[thisnum]);
 }
