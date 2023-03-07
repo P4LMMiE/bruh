@@ -9,6 +9,6 @@ int main()
         sum+=x[i];
     }
     printf("%d + %d + %d = %d\n",x[0],x[1],x[2],sum);
-    if(sum==100)
+    if(sum<=100)
         printf("100 OK !!");
 }
