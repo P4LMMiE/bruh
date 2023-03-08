@@ -8,7 +8,7 @@ int main()
 
     printf("N = ");
     scanf("%d",&n);
-    if(n>=5)
+    if(n>=5&&n<=100)
     {   printf("Input X : ");
         for(i=0;i<n;i++)
         {
